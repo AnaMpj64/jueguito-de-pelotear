@@ -1,9 +1,11 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%; 
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; 
 }
 
 .parte-superior {
@@ -15,14 +17,47 @@ body, html {
     color: white;
 }
 
-.parte-inferior {
-    display: flex;
-    height: 67%;
-    width: 100%;
+.parte-superior h1 {
+    font-size: 1.2rem; 
+    text-align: left;
 }
 
+.magic-text {
+    font-size: 1.2rem; 
+}
+
+.parte-inferior {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: auto; 
+    width: 100%;
+    margin-top: auto; 
+}
+
+.contenedor-juego {
+    padding: 2%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+canvas {
+    width: 100%; 
+    height: 600px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    display: block; 
+}
+
+#out {
+    color: white;
+}
+
+
 .lado-izquierdo {
-    /* background-color: #f1f1f1; */
     width: 50%;
     display: flex;
     justify-content: left;
@@ -47,14 +82,6 @@ body, html {
     z-index: 0; 
 }
 
-
-canvas {
-    position: absolute;
-    z-index: 1; 
-    width: 100%;
-    height: 100%;
-}
-
 #contenedor-3d {
     position: relative;
     width: 100%;
@@ -65,7 +92,6 @@ canvas {
 }
 
 .lado-derecho {
-    /* background-color: #ddd; */
     width: 50%;
     display: flex;
     justify-content: left;
